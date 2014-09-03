@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapTest", "BitmapTest\BitmapTest.csproj", "{B082D3BD-28B7-4645-A9AB-95431364ED1D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310} = {FDEF09CC-62FB-4A93-AE02-D59E3FA47310}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DBCE0CB0-7C02-4923-A3BA-4A2FF3E58AA6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SobelAmp", "SobelAmp\SobelAmp.vcxproj", "{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Debug|Win32.ActiveCfg = Debug|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Debug|Win32.Build.0 = Debug|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Debug|x86.ActiveCfg = Debug|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Debug|x86.Build.0 = Debug|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Release|Win32.ActiveCfg = Release|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Release|Win32.Build.0 = Release|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Release|x86.ActiveCfg = Release|x86
+		{B082D3BD-28B7-4645-A9AB-95431364ED1D}.Release|x86.Build.0 = Release|x86
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Debug|Win32.Build.0 = Debug|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Debug|x86.ActiveCfg = Debug|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Debug|x86.Build.0 = Debug|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Release|Win32.ActiveCfg = Release|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Release|Win32.Build.0 = Release|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Release|x86.ActiveCfg = Release|Win32
+		{FDEF09CC-62FB-4A93-AE02-D59E3FA47310}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

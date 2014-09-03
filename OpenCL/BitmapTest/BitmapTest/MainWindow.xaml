@@ -1,0 +1,31 @@
+﻿<Window x:Class="BitmapTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+        <TextBox Name="url" Text="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Google_Chrome_icon_(2011).svg/64px-Google_Chrome_icon_(2011).svg.png" />
+            <Button Click="Button_Get_Click">Get</Button>
+        </StackPanel>
+        <Image Grid.Row="1"  Name="originalImage" />
+        <Image Grid.Row="1"   Grid.Column="1"  Name="convolutedImage" />
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" DockPanel.Dock="Bottom">
+            <ComboBox Name="comboProcessor" SelectedIndex="0" SelectedItem="{Binding SelectedProcessor}" ItemsSource="{Binding Processors}" VerticalContentAlignment="Center" Width="80" />
+            <Button Click="Button_Click" Margin="5">Load</Button>
+            <Button Click="Button_Click_1" Margin="5">Convolute</Button>
+            <CheckBox IsChecked="{Binding CopyOriginal}" Click="CheckBox_Click" VerticalAlignment="Center" Margin="5">Copy Original</CheckBox>
+            <CheckBox IsChecked="{Binding ConvertToGrayscale}" Click="CheckBox_Click" VerticalAlignment="Center" Margin="5">Convert to Grayscale</CheckBox>
+            <Slider Minimum="1" Maximum="256" Value="{Binding Threshold}" ValueChanged="Slider_ValueChanged" Width="300" />
+        </StackPanel>
+        <TextBlock Name="time" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Right" />
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="DictionaryCracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="750" Width="800">
+    <Grid TextBlock.FontSize="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBox Name="log" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+        <Button Name="button" Content="Crack" Grid.Row="1" Click="Button_Click" IsEnabled="False" />
+    </Grid>
+</Window>
