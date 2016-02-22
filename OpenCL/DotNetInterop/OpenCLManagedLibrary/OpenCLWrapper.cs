@@ -14,7 +14,7 @@ namespace OpenCLManagedLibrary
         private Cl.Device _device;
         private Cl.Program _program;
         private Cl.ErrorCode _error;
-        private string programPath = @"C:\Work\GPGPU\SDP\OpenCL\DotNetInterop\OpenCLManagedLibrary\square_array.cl";
+        private string programPath = @"C:\Work\GPGPU\gpgpu-dotnet\OpenCL\DotNetInterop\OpenCLManagedLibrary\square_array.cl";
 
         public string DeviceName
         {

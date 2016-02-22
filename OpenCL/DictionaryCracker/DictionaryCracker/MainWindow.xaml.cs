@@ -38,7 +38,7 @@ namespace DictionaryCracker
                 _crackers.Add(new CpuMD5Cracker());
                 _crackers.Add(new OpenCLMD5Cracker());
 
-                var passwords = File.ReadAllLines(@"C:\Work\GPGPU\SDP\OpenCL\DictionaryCracker\DictionaryCracker\passwords.txt");
+                var passwords = File.ReadAllLines("passwords.txt");
                 _passwords = passwords.Where(p => p.Length < 16).ToList();
 
                 _passwords.AddRange(passwords.Select(p => p.ToUpper()));

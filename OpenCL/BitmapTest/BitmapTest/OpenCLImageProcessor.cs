@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -18,6 +19,12 @@ namespace BitmapTest
 
         public OpenCLImageProcessor(string programPath)
         {
+            programPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\sobel.cl");
+            if (!File.Exists(programPath))
+                programPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"sobel.cl");
+            if (!File.Exists(programPath))
+                throw new FileNotFoundException(programPath);
+
             this.programPath = programPath;
             Setup();
             LoadProgram();
@@ -97,7 +104,8 @@ namespace BitmapTest
 
             //Compile kernel source
 #if DEBUG
-            error = Cl.Cl.BuildProgram(program, 0, null, "-g -s \"C:\\Work\\GPGPU\\SDP\\OpenCL\\BitmapTest\\BitmapTest\\sobel.cl\"", null, IntPtr.Zero);
+            var args = string.Format("-g -s \"{0}\"", programPath);
+            error = Cl.Cl.BuildProgram(program, 0, null, args, null, IntPtr.Zero);
 #else
             error = Cl.Cl.BuildProgram(program, 1, new[] { _device }, string.Empty, null, IntPtr.Zero);
 #endif
