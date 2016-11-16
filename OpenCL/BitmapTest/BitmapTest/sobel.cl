@@ -30,7 +30,8 @@ __kernel void sobelEdgeDetect(__read_only  image2d_t srcImg, __write_only image2
 
   float Gx = -1 * lum_nw + lum_ne + -2 * lum_w + 2 * lum_e + -1 * lum_sw + lum_se;
   float Gy = lum_nw + 2 * lum_n  +  lum_ne + -1 * lum_sw + -2 * lum_s + -1 * lum_se;
-  float G = sqrt(Gx*Gx + Gy*Gy);
+  //float G = sqrt(Gx*Gx + Gy*Gy);
+  float G = fabs(Gx) + fabs(Gy);
 
   if(G < threshold)
   {

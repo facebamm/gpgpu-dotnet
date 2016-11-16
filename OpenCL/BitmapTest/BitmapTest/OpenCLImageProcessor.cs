@@ -156,7 +156,7 @@ namespace BitmapTest
             //Pass the memory buffers to our kernel function
             error = Cl.Cl.SetKernelArg(kernel, 0, (IntPtr)intPtrSize, inputImage2DBuffer);
             error |= Cl.Cl.SetKernelArg(kernel, 1, (IntPtr)intPtrSize, outputImage2DBuffer);
-            error |= Cl.Cl.SetKernelArg(kernel, 2, (float)threshold / 100.0f);
+            error |= Cl.Cl.SetKernelArg(kernel, 2, (float)threshold / 250.0f);
             CheckErr(error, "Cl.SetKernelArg");
 
             //Create a command queue, where all of the commands for execution will be added
