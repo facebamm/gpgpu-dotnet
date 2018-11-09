@@ -131,8 +131,7 @@ namespace BitmapTest
             Cl.Kernel kernel = Cl.Cl.CreateKernel(program, "sobelEdgeDetect", out error);
             CheckErr(error, "Cl.CreateKernel");
 
-            int intPtrSize = 0;
-            intPtrSize = Marshal.SizeOf(typeof(IntPtr));
+            int intPtrSize = IntPtr.Size;
 
             //OpenCL memory buffer that will keep our image's byte[] data.
             Cl.IMem inputImage2DBuffer;
